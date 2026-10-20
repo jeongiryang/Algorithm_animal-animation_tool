@@ -1,3 +1,40 @@
+# Animal 1000 Points
+
+999개 좌표와 학번으로 계산한 붉은 점을 AnimalScript로 출력하는 Python 프로그램입니다. x 또는 y가 50의 배수인 점은 더 크게 표시합니다.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![AnimalScript](https://img.shields.io/badge/AnimalScript-444444?style=flat-square)
+
+[실행](#실행) · [생성기](src/script.py) · [입력 데이터](data/points.txt) · [보관된 AnimalScript](data/animal_output.asu) · [과제 보고서](#과제-보고서)
+
+<img src="screenshots/최종렌더링완료%28빨간점위치표시%29_진행률_1000.png" alt="기존 과제 최종 결과: 1,000개 점과 학번으로 계산한 붉은 점" width="800">
+
+## 실행
+
+생성기는 현재 작업 폴더에서 `points.txt`를 읽습니다. 저장소 루트에서 다음 순서로 실행합니다.
+
+```bash
+cd data
+python ../src/script.py
+```
+
+실행하면 `data/animal_output.txt`가 생성됩니다. 저장소에 보관된 `.asu` 파일과 새로 생성되는 `.txt` 파일을 구분해 사용합니다. Animal에서 보관된 `data/animal_output.asu`를 열면 제출 당시의 결과를 볼 수 있습니다.
+
+## 표시 규칙
+
+| 점 | 표현 |
+| --- | --- |
+| 일반 좌표 | 검은색, 반지름 `1` |
+| x 또는 y가 50의 배수 | 검은색, 반지름 `3` |
+| 마지막 1,000번째 점 | 붉은색, 반지름 `3` |
+
+붉은 점은 `x = 20222017 % 999 = 259`, `y = 20222017 % 998 = 541`로 계산합니다. 원래 보고서에는 초기·중간·최종 렌더링 화면과 전체 생성 소스가 있습니다.
+
+## 과제 보고서
+
+<details>
+<summary>기존 과제 보고서 펼치기</summary>
+
 # Animal Animation 과제 보고서
 
 - [_GitHub 바로가기_](https://github.com/jeongiryang/Algorithm_animal-animation_tool.git)
@@ -166,3 +203,5 @@ if __name__ == "__main__":
 
 - 어려웠던 것을 굳이 뽑자면 환경 구축에서 좀 애먹었음
    - 과제 수행 초기 환경 변수 지정 및 Animal 실행 파일 경로 인식 문제로 시행착오를 겪었으나, 이를 해결하며 터미널 환경에서의 파일 경로 관리와 개발 환경 설정의 중요성을 깊이 체감함.
+
+</details>
